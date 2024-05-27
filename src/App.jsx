@@ -1,5 +1,6 @@
 import { useState } from 'react'
-
+import { Routes,Route } from 'react-router-dom'
+import Layout from './Components/Features/Layout'
 
 
 function App() {
@@ -7,9 +8,10 @@ function App() {
 
   return (
     <>
-       <h1 className="text-3xl font-bold underline text-center align-middle justify-center">
-      Hello world!
-    </h1>
+       <Routes>
+        <Route path='/' element={<Layout />} />
+        <Route exact path='/' element={<Home />} />
+       </Routes>
     </>
   )
 }
